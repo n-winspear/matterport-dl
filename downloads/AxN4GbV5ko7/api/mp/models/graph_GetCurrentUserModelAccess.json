@@ -1,0 +1,37 @@
+{
+  "errors" : [ {
+    "message" : "Error fetching data (path: /model/organization, code: request.unauthorized): Unauthorized",
+    "locations" : [ {
+      "line" : 4,
+      "column" : 5
+    } ],
+    "path" : [ "model", "organization" ],
+    "extensions" : {
+      "code" : "request.unauthorized",
+      "retry" : "false",
+      "httpCode" : 401,
+      "classification" : "DataFetchingException"
+    }
+  }, {
+    "message" : "Error fetching data (path: /model/users, code: request.unauthorized): Unauthorized",
+    "locations" : [ {
+      "line" : 5,
+      "column" : 5
+    } ],
+    "path" : [ "model", "users" ],
+    "extensions" : {
+      "code" : "request.unauthorized",
+      "retry" : "false",
+      "httpCode" : 401,
+      "classification" : "DataFetchingException"
+    }
+  } ],
+  "data" : {
+    "model" : {
+      "id" : "AxN4GbV5ko7",
+      "organization" : null,
+      "users" : null,
+      "__typename" : "Model"
+    }
+  }
+}

@@ -1,10 +1,23 @@
-# Ignore everything
-*
+# Ignore downloads directory
+# downloads/
+matterports/
+outputs/
 
-# But not these files...
-!.gitignore
-!matterport-dl.py
+# Ignore virtual environment
+venv/
+env/
+.env
 
-# Don't ignore the graph_posts directory and its contents
-!/graph_posts/
-!/graph_posts/*
+# Ignore python cache
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore outputs
+*.log

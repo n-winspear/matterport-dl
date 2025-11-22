@@ -28,6 +28,8 @@ import decimal
 accessurls = []
 SHOWCASE_INTERNAL_NAME = "showcase.js" # Will be updated dynamically
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
+
 def makeDirs(dirname):
     pathlib.Path(dirname).mkdir(parents=True, exist_ok=True)
 
@@ -185,10 +187,28 @@ def parseRuntimeJS(content):
                 name_map[k.strip()] = v.strip('"')
 
     # Regex to find the hash mapping: +{235:"ebe436e0...",...}[e]+".js"
-    hash_map_match = re.search(r'\+"\."\+({.*?})\[e\]\+"\.js"', content)
+    # Regex to find the hash mapping: +{235:"ebe436e0...",...}[e]+".js"
+    # Matches: +"."+{...}[e]+".js"
+    # The content usually has: ...+"."+{...}[e]+".js"...
+    # We need to match the dictionary inside the curly braces.
+    
+    logging.info(f"Runtime JS content start: {content[:500]}")
+    
+    # Robust regex handling different quotes and whitespace
+    # Matches: + "." + {dictionary} [e] + ".js"
+    # We use re.DOTALL just in case
+    hash_map_match = re.search(r'\+\s*["\']\.["\']\s*\+\s*({.*?})\s*\[e\]\s*\+\s*["\']\.js["\']', content, re.DOTALL)
+    
+    if not hash_map_match:
+         logging.info("First regex failed, trying loose match")
+         # Match just the dictionary followed by [e]+".js"
+         hash_map_match = re.search(r'({[\w\d]+:"[a-f0-9]+".*?})\[e\]\+"\.js"', content, re.DOTALL)
+
     hash_map = {}
     if hash_map_match:
-        pairs = hash_map_match.group(1).split(',')
+        # Strip curly braces from the captured group
+        content_str = hash_map_match.group(1).strip('{}')
+        pairs = content_str.split(',')
         for pair in pairs:
             if ':' in pair:
                 k, v = pair.split(':')
@@ -207,16 +227,67 @@ def parseRuntimeCSS(content):
     Parses the runtime.js content to extract the CSS chunk mapping.
     """
     # n.miniCssF=e=>"css/"+({5385:"init",...}[e]||e)+".css"
+    # n.miniCssF=e=>"css/"+({5385:"init",...}[e]||e)+".css"
     name_map_match = re.search(r'n\.miniCssF=e=>"css/"\+\(({.*?)}\[e\]\|\|e\)\+"\.css"', content)
-    css_chunks = []
+    name_map = {}
     if name_map_match:
         pairs = name_map_match.group(1).split(',')
         for pair in pairs:
             if ':' in pair:
                 k, v = pair.split(':')
-                css_chunks.append(v.strip('"'))
+                name_map[k.strip()] = v.strip('"')
+
+    # Find all chunks that have CSS
+    # n.f.miniCss=(r,a)=>{... {1442:1,5385:1,...}[r] ...}
+    # We look for the object with keys having value 1 inside n.f.miniCss
+    css_chunks_match = re.search(r'n\.f\.miniCss=.*?\s*({[\d:,]+})\s*\[r\]', content, re.DOTALL)
+    
+    css_chunks = []
+    if css_chunks_match:
+        chunk_ids_str = css_chunks_match.group(1).strip('{}')
+        pairs = chunk_ids_str.split(',')
+        for pair in pairs:
+            if ':' in pair:
+                chunk_id, _ = pair.split(':')
+                chunk_id = chunk_id.strip()
+                # Resolve name: use map if exists, else use ID
+                chunk_name = name_map.get(chunk_id, chunk_id)
+                css_chunks.append(chunk_name)
+    
+    # Fallback: if we couldn't find the list, at least return the named ones we found
+    if not css_chunks and name_map:
+        css_chunks = list(name_map.values())
+
     return css_chunks
 
+
+def downloadStaticReferencedAssets(html_content, base_url):
+    logging.info("Downloading static referenced assets from HTML...")
+    urls = []
+    # Scripts
+    matches = re.findall(r'<script[^>]+src=["\']([^"\']+)["\']', html_content)
+    urls.extend(matches)
+    # Links (CSS, icons)
+    matches = re.findall(r'<link[^>]+href=["\']([^"\']+)["\']', html_content)
+    urls.extend(matches)
+    
+    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+        for asset in urls:
+            if asset.startswith("http") or asset.startswith("//") or asset.startswith("data:"):
+                continue
+            
+            # Clean query params for local filename
+            local_file = asset.split('?')[0]
+            
+            # Construct full URL
+            if base_url.endswith("/") and asset.startswith("/"):
+                full_url = base_url[:-1] + asset
+            elif not base_url.endswith("/") and not asset.startswith("/"):
+                full_url = base_url + "/" + asset
+            else:
+                full_url = base_url + asset
+                
+            executor.submit(downloadFile, full_url, local_file)
 
 def downloadAssets(base, runtime_content):
     
@@ -257,13 +328,12 @@ def downloadAssets(base, runtime_content):
                    "mattertag-disc-128-free.v1", "mobile-help-play-button.svg", "nav_help_360", "nav_help_click_inside", "nav_help_gesture_drag",
                    "nav_help_gesture_drag_two_finger", "nav_help_gesture_pinch", "nav_help_gesture_position", "nav_help_gesture_position_two_finger",
                    "nav_help_gesture_tap", "nav_help_inside_key", "nav_help_keyboard_all", "nav_help_keyboard_left_right", "nav_help_keyboard_up_down",
-                   "nav_help_mouse_click", "nav_help_mouse_drag_left", "nav_help_mouse_drag_right", "nav_help_mouse_position_left",
                    "nav_help_mouse_position_right", "nav_help_mouse_zoom", "nav_help_tap_inside", "nav_help_zoom_keys", "NoteColor", "NoteIcon", "pinAnchor",
                    "puck_256_red", "roboto-700-42_0", "safari", "scope.svg", "showcase-password-background.jpg", "surface_grid_planar_256", "tagbg", "tagmask",
-                   "vert_arrows","headset-quest-2","pinIconDefault","tagColor"]
+                   "vert_arrows","headset-quest-2","pinIconDefault","tagColor", "atlas"]
 
     assets = ["css/showcase.css", "css/unsupported_browser.css", "cursors/grab.png", "cursors/grabbing.png", "cursors/zoom-in.png",
-              "cursors/zoom-out.png", "locale/strings.json", "css/ws-blur.css", "css/core.css", "css/split.css","css/late.css", "matterport-logo.svg"]
+              "cursors/zoom-out.png", "locale/strings.json", "css/ws-blur.css", "css/core.css", "css/split.css","css/late.css", "matterport-logo.svg", "css/init.css"]
               
     downloadFile("https://my.matterport.com/favicon.ico", "favicon.ico")
     
@@ -424,8 +494,22 @@ def GetOrReplaceKey(url, is_new=False):
 
 def downloadPage(pageid):
     global ADVANCED_DOWNLOAD_ALL
-    makeDirs(pageid)
-    os.chdir(pageid)
+    
+    # Create downloads directory if it doesn't exist
+    downloads_dir = os.path.join(os.getcwd(), "downloads")
+    if not os.path.exists(downloads_dir):
+        os.makedirs(downloads_dir)
+        
+    page_root_dir = os.path.join(downloads_dir, pageid)
+    makeDirs(page_root_dir)
+
+    # Load graph requests from repo root before changing directory
+    graph_posts_dir = os.path.join(os.getcwd(), "graph_posts")
+    openDirReadGraphReqs(graph_posts_dir, pageid)
+    
+    # Change to the target directory immediately
+    original_cwd = os.getcwd()
+    os.chdir(page_root_dir)
 
     ADV_CROP_FETCH = [
         {
@@ -434,20 +518,26 @@ def downloadPage(pageid):
             },
         {
                 "start": "crop=512,512,",
-               "increment": '0.25'
+                "increment": '0.25'
             }
     ]
 
-    try:
-        logging.basicConfig(filename='run_report.log', encoding='utf-8', level=logging.DEBUG,
-                            format='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
-    except ValueError:
-        logging.basicConfig(filename='run_report.log', level=logging.DEBUG,
-                            format='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    import glob
+
+# Configure logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s %(levelname)-8s %(message)s',
+        handlers=[
+            logging.FileHandler("download.log", mode='w'),
+            logging.StreamHandler()
+        ]
+    )
     logging.debug(f'Started up a download run')
-    page_root_dir = os.path.abspath('.')
+    
     print("Downloading base page...")
-    r = requests.get(f"https://my.matterport.com/show/?m={pageid}")
+    url = f"https://my.matterport.com/show/?m={pageid}"
+    r = session.get(url)
     r.encoding = "utf-8"
     
     # Find static base
@@ -468,11 +558,12 @@ def downloadPage(pageid):
         threeMinUrl = threeMin.group()
         # Construct other vendor URLs based on three.js location
         # Note: The new structure might be different, but let's try to infer standard libs
+        threeCoreUrl = threeMinUrl.replace('three.module.min.js','three.core.min.js').replace('three.min.js','three.core.min.js')
         dracoWasmWrapper = threeMinUrl.replace('three.module.min.js','libs/draco/gltf/draco_wasm_wrapper.js').replace('three.min.js','libs/draco/gltf/draco_wasm_wrapper.js')
         dracoDecoderWasm = threeMinUrl.replace('three.module.min.js','libs/draco/gltf/draco_decoder.wasm').replace('three.min.js','libs/draco/gltf/draco_decoder.wasm')
         basisTranscoderWasm = threeMinUrl.replace('three.module.min.js','libs/basis/basis_transcoder.wasm').replace('three.min.js','libs/basis/basis_transcoder.wasm')
         basisTranscoderJs = threeMinUrl.replace('three.module.min.js','libs/basis/basis_transcoder.js').replace('three.min.js','libs/basis/basis_transcoder.js')
-        webglVendors = [threeMinUrl, dracoWasmWrapper, dracoDecoderWasm, basisTranscoderWasm, basisTranscoderJs ]
+        webglVendors = [threeMinUrl, threeCoreUrl, dracoWasmWrapper, dracoDecoderWasm, basisTranscoderWasm, basisTranscoderJs ]
     else:
         logging.warning("Could not find three.js URL, WebGL vendors might fail")
         webglVendors = []
@@ -572,21 +663,38 @@ def downloadPage(pageid):
     # Automatic redirect if GET param isn't correct
     injectedjs = 'if (window.location.search != "?m=' + pageid + \
                       '") { document.location.search = "?m=' + pageid + '"; }'
-    content = r.text.replace(staticbase, ".").replace('"https://cdn-1.matterport.com/', '`${window.location.origin}${window.location.pathname}` + "').replace('"https://mp-app-prod.global.ssl.fastly.net/', '`${window.location.origin}${window.location.pathname}` + "').replace(
-        "window.MP_PREFETCHED_MODELDATA", f"{injectedjs};window.MP_PREFETCHED_MODELDATA").replace('"https://events.matterport.com/', '`${window.location.origin}${window.location.pathname}` + "').replace('"https://cdn-2.matterport.com/', '`${window.location.origin}${window.location.pathname}` + "')
+    # Replace static base and remove external CDN URLs for local serving
+    # Use absolute URL for localhost to avoid Invalid URL errors in client
+    content = r.text.replace(staticbase, "http://localhost:8080/").replace(
+        "window.MP_PREFETCHED_MODELDATA", f"{injectedjs};window.MP_PREFETCHED_MODELDATA"
+    )
+    # Remove external CDN prefixes - for local serving we don't need them
+    # Use absolute URL for localhost to avoid Invalid URL errors in client
+    content = content.replace('"https://cdn-1.matterport.com/', '"http://localhost:8080/')
+    content = content.replace('"https://mp-app-prod.global.ssl.fastly.net/', '"http://localhost:8080/')
+    content = content.replace('"https://events.matterport.com/', '"http://localhost:8080/')
+    content = content.replace('"https://cdn-2.matterport.com/', '"http://localhost:8080/')
     
     if threeMin:
-        content = content.replace(f'{threeMinUrl}', threeMinUrl.replace('https://static.matterport.com/',''))
+        # Prepend ./ to the path for local module loading
+        content = content.replace(f'{threeMinUrl}', "./" + threeMinUrl.replace('https://static.matterport.com/',''))
         
     content = re.sub(r"validUntil\":\s*\"20[\d]{2}-[\d]{2}-[\d]{2}T", "validUntil\":\"2099-01-01T", content)
 
     
+    # Inject client-side logging
+    content = injectClientLogger(content)
+
+    # Inject all graph data
+    content = injectGraphData(content, pageid)
+
     with open("index.html", "w", encoding="UTF-8") as f:
         f.write(content)
 
 
     print("Downloading static assets...")
     downloadAssets(staticbase, runtime_content)
+    downloadStaticReferencedAssets(r.text, staticbase)
     downloadWebglVendors(webglVendors)
     # Patch showcase.js to fix expiration issue and some other changes for local hosting
     patchShowcase()
@@ -599,8 +707,18 @@ def downloadPage(pageid):
     print(f"Patching graph_GetModelDetails.json URLs")
     patchGetModelDetails()
     print(f"Downloading model ID: {pageid} ...")
+    
+    # Create downloads directory if it doesn't exist
+    downloads_dir = os.path.join(os.getcwd(), "downloads")
+    if not os.path.exists(downloads_dir):
+        os.makedirs(downloads_dir)
+        
+    page_root_dir = os.path.join(downloads_dir, pageid)
+    makeDirs(page_root_dir)
+    
     downloadModel(pageid, accessurl, mesh_accessurl)
-    os.chdir(page_root_dir)
+    # os.chdir(page_root_dir) # Already changed at start
+    makeDirs("api/v1")
     open("api/v1/event", 'a').close()
     print("Done!")
 
@@ -706,6 +824,88 @@ PROXY = False
 ADVANCED_DOWNLOAD_ALL = False
 
 GRAPH_DATA_REQ = {}
+
+def injectClientLogger(content):
+    logger_script = """
+    <script>
+    (function() {
+        var oldLog = console.log;
+        var oldWarn = console.warn;
+        var oldError = console.error;
+
+        function sendLog(level, args) {
+            var msg = Array.from(args).map(a => {
+                try { return typeof a === 'object' ? JSON.stringify(a) : String(a); }
+                catch(e) { return String(a); }
+            }).join(' ');
+            fetch('/client_log', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({level: level, message: msg, timestamp: new Date().toISOString()})
+            }).catch(e => {});
+        }
+
+        console.log = function() { oldLog.apply(console, arguments); sendLog('INFO', arguments); };
+        console.warn = function() { oldWarn.apply(console, arguments); sendLog('WARN', arguments); };
+        console.error = function() { oldError.apply(console, arguments); sendLog('ERROR', arguments); };
+        
+        window.onerror = function(msg, url, line, col, error) {
+            sendLog('ERROR', ['Uncaught Exception:', msg, url, line, col, error]);
+        };
+        
+        window.addEventListener('unhandledrejection', function(event) {
+            sendLog('ERROR', ['Unhandled Rejection:', event.reason]);
+        });
+    })();
+    </script>
+    """
+    return content.replace("<head>", "<head>" + logger_script)
+
+def injectGraphData(content, pageid):
+    logging.info("Injecting graph data into index.html...")
+    match = re.search(r'window\.MP_PREFETCHED_MODELDATA = parseJSON\("(.+?)"\);', content, re.DOTALL)
+    if not match:
+        logging.warning("Could not find MP_PREFETCHED_MODELDATA in index.html for injection")
+        return content
+
+    json_str = match.group(1).replace('\\"', '"').replace('\\\\', '\\')
+    try:
+        data = json.loads(json_str)
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding JSON from index.html: {e}")
+        return content
+
+    if "queries" not in data:
+        data["queries"] = {}
+
+    # Iterate over all graph_*.json files in the expected download location
+    # Note: We are currently in the download directory when this runs? 
+    # No, downloadPage changes dir at the end? No, it doesn't change dir until the server starts or we need to be careful.
+    # The files are in api/mp/models/ relative to current working dir if we are inside the page dir.
+    # Let's check where we are. downloadPage creates page_root_dir but doesn't chdir into it until later?
+    # Actually downloadPage does NOT chdir. It uses os.path.join.
+    
+    models_dir = os.path.join("api", "mp", "models")
+    if os.path.exists(models_dir):
+        graph_files = glob.glob(os.path.join(models_dir, "graph_*.json"))
+        logging.info(f"Found {len(graph_files)} graph files to inject.")
+
+        for file_path in graph_files:
+            filename = os.path.basename(file_path)
+            op_name = filename.replace("graph_", "").replace(".json", "")
+            
+            with open(file_path, "r", encoding="utf-8") as f:
+                try:
+                    op_data = json.load(f)
+                    data["queries"][op_name] = op_data
+                    logging.info(f"Injected {op_name}")
+                except json.JSONDecodeError:
+                    logging.warning(f"Failed to decode {filename}, skipping.")
+    else:
+        logging.warning(f"Models directory {models_dir} not found during injection")
+
+    new_json_str = json.dumps(data).replace('\\', '\\\\').replace('"', '\\"')
+    return content.replace(match.group(1), new_json_str)
 
 def openDirReadGraphReqs(path, pageId):
     for root, dirs, filenames in os.walk(path):

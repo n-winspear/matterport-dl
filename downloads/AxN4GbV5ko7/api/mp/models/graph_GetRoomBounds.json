@@ -1,0 +1,1571 @@
+{
+  "data" : {
+    "model" : {
+      "floors" : [ {
+        "id" : "tsmq1wak12rhgn0mawksxcwcd",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "edges" : [ {
+          "id" : "ei0uadmcdfew96gd1gpuruqib",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "yuzckuky5unacbzcmf2rythna",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2053381067530125,
+              "y" : -4.5083498366790415,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "f7zberexpff187bipdk4nyzbb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2063551819971132,
+              "y" : -2.419973441696616,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.15,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "02nh7yu8ngn0ec62wz01s1u1c",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "zkhg3pi9yt0rucszu9cdndmxa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7917186304633924,
+              "y" : 0.2735580212819514,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "g7yeh744dn1zfm5xihcina89a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7920311029784078,
+              "y" : -0.38881453748045647,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.43999999999999995,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "42ws23fxpu78b4ef5p7nfmeka",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6synxarpn3gxgbkm8zupizhcd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 4.311327040351836,
+              "y" : -2.4205262520763804,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "yakamtxb1xc5i7wa3h0fxrf6b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.733595803931655,
+              "y" : -2.4216878391389667,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ {
+            "id" : "itdz6tbd904h7su4ufic4dt2b",
+            "width" : 0.5413871917483053,
+            "relativeCenter" : 0.1365220854949002,
+            "type" : "doorway",
+            "height" : 2.0356850624084473,
+            "lowerElevation" : -6.736516952514648E-4,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "auyuyzp43mx1fkxfd90n5ztgb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "nwn5sayn7h3fadxg4nr8p74ka",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.4200448818453735,
+              "y" : 0.27508292907966353,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "5nnwu8ny65pksgcqyym9b4n3c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.420960962633974,
+              "y" : -1.7125663155254118,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42000000000000004,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "i3bx0hkf0aigan856r9k7d09a",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "dpaf67g3mad0ir505hnsub6td",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.735500173120047,
+              "y" : 1.5952265908842578,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "7e2pyn9prh51taxbbkp4sey8c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.7899948429278996,
+              "y" : 1.597569651907743,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "83q9txfb75u09ibn1ze6bumda",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "5xqpccmcafdudpx1bs7px2bzd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.164169215141159,
+              "y" : -1.7156801271858408,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "0nhpqegwt3uypsm3kdypf792d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.1649114149546533,
+              "y" : -0.1540095714877273,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ {
+            "id" : "rdh5dh5g5ettr5fbx2yz6md1b",
+            "width" : 0.7022627742785963,
+            "relativeCenter" : 0.31806255030639047,
+            "type" : "doorway",
+            "height" : 2.11899995803833,
+            "lowerElevation" : 0.003999948501586914,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "hm55awzxq6icur1rqt3cfkb9b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "39uc2322ih9gqy0kb7stad1ia",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.7893641976278734,
+              "y" : 0.2723764758175,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "zkhg3pi9yt0rucszu9cdndmxa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7917186304633924,
+              "y" : 0.2735580212819514,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "zimid5hcnr9c1xdk8w73pgtfc",
+            "width" : 0.8620273274109883,
+            "relativeCenter" : 0.6827948383189839,
+            "type" : "doorway",
+            "height" : 2.0040000677108765,
+            "lowerElevation" : 0.008999943733215332,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          }, {
+            "id" : "83atzzcegf7z224zpgsp1bs3d",
+            "width" : 0.7009851545950658,
+            "relativeCenter" : 0.1822959740524154,
+            "type" : "doorway",
+            "height" : 2.3829998485744,
+            "lowerElevation" : 0.008999999612569809,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "qw0311rpxgw0ew15i9azssqea",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "39uc2322ih9gqy0kb7stad1ia",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.7893641976278734,
+              "y" : 0.2723764758175,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "i43g29sxyuw6z15i00522ab4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.789162619193781,
+              "y" : -0.1538301537268884,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "xwti8qy98qf5dgnztama2ew2b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "k4wick7szy8ey2pa5iwmn0sdb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.7325892207144715,
+              "y" : -4.510063227134799,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "yakamtxb1xc5i7wa3h0fxrf6b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.733595803931655,
+              "y" : -2.4216878391389667,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42000000000000004,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "9cstekh9i976su0mgy7s9n35b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "inwg8mwf3cib5kemkuh2wh6wb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7926669112108452,
+              "y" : -1.7142835816384316,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "5nnwu8ny65pksgcqyym9b4n3c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.420960962633974,
+              "y" : -1.7125663155254118,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.12,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "adn14dbuyi1chyr10e3aes3pd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "xk5f698a9wff36bramq5a3yyd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -1.5078758397637189,
+              "y" : -0.3884732585796209,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "g7yeh744dn1zfm5xihcina89a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7920311029784078,
+              "y" : -0.38881453748045647,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.58,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "9x8eac40a58c8u7cpm091qa4d",
+            "width" : 0.5741859028209719,
+            "relativeCenter" : 0.49492930562382587,
+            "type" : "doorway",
+            "height" : 1.9955000560730696,
+            "lowerElevation" : -0.002499999478459358,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "bnhq5k32b8exz06y8p6701nbb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "5xqpccmcafdudpx1bs7px2bzd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.164169215141159,
+              "y" : -1.7156801271858408,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "ttgxtia4b894ud38dg28u8ncb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.163828436103299,
+              "y" : -2.4194659230340574,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "kncwtz2bc60uy2x094s1n8bib",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "inwg8mwf3cib5kemkuh2wh6wb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7926669112108452,
+              "y" : -1.7142835816384316,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "205c5r97y1192486weapzrmtd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.28465364377599134,
+              "y" : -1.71478846364136,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.12,
+          "openings" : [ {
+            "id" : "mnupdfg2f13ukc5xispp43dpb",
+            "width" : 0.6175253371516772,
+            "relativeCenter" : 0.5092644900212735,
+            "type" : "doorway",
+            "height" : 2.0302595496177673,
+            "lowerElevation" : -0.004974365234375,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "sxi899xcnzim46m3fk0yuiqud",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "99satp229tda7h59deshibh3a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.0952990244974343,
+              "y" : -3.1094242615629155,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "0i9zcg77btek4cac9npnz33yd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.0946074334596276,
+              "y" : -4.507296290927656,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42000000000000004,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "k3zxx5thbk4db31k0xwty4p9c",
+            "width" : 0.7873392798997542,
+            "relativeCenter" : 0.3516506070951376,
+            "type" : "doorway",
+            "height" : 2.069999933242798,
+            "lowerElevation" : -0.006999969482421875,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "wxui1sda9xraca4t595dz7wrc",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "f7zberexpff187bipdk4nyzbb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2063551819971132,
+              "y" : -2.419973441696616,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "ttgxtia4b894ud38dg28u8ncb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.163828436103299,
+              "y" : -2.4194659230340574,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "5dyhx5w8bdqxfs7bgit5prmzb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "nwn5sayn7h3fadxg4nr8p74ka",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.4200448818453735,
+              "y" : 0.27508292907966353,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "938s3362i0smtpp9xx8ru3m7a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -1.5075637951422154,
+              "y" : 0.2737540407454727,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.58,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "7x88nkthp769z8c41etsb8txb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "99satp229tda7h59deshibh3a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.0952990244974343,
+              "y" : -3.1094242615629155,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "yfykd11daerimkw956s7y6r4d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.2839988917468455,
+              "y" : -3.1090249244826955,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5800000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "bp5t7h83pa9n7acn7nknw56qb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "yuzckuky5unacbzcmf2rythna",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2053381067530125,
+              "y" : -4.5083498366790415,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "k4wick7szy8ey2pa5iwmn0sdb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.7325892207144715,
+              "y" : -4.510063227134799,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42000000000000004,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "dewd6a2d53wqa3gadcpeafupd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "xk5f698a9wff36bramq5a3yyd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -1.5078758397637189,
+              "y" : -0.3884732585796209,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "938s3362i0smtpp9xx8ru3m7a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -1.5075637951422154,
+              "y" : 0.2737540407454727,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "2egp0518cuczt88q42iuay7ec",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "dpaf67g3mad0ir505hnsub6td",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.735500173120047,
+              "y" : 1.5952265908842578,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "yakamtxb1xc5i7wa3h0fxrf6b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 6.733595803931655,
+              "y" : -2.4216878391389667,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5800000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "0qmmwzcd08bbgik4w6y4zpfyb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "yuzckuky5unacbzcmf2rythna",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2053381067530125,
+              "y" : -4.5083498366790415,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "0i9zcg77btek4cac9npnz33yd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.0946074334596276,
+              "y" : -4.507296290927656,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5800000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "7q1udad10dtn4s1r9ph1fmnaa",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "5nnwu8ny65pksgcqyym9b4n3c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.420960962633974,
+              "y" : -1.7125663155254118,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "6t25paqxe06k0wurfhb9t9rad",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.422284258664472,
+              "y" : -4.5044378298888335,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "g0n49tmhx56140g4p3xwbmq6d",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "0nhpqegwt3uypsm3kdypf792d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.1649114149546533,
+              "y" : -0.1540095714877273,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "i43g29sxyuw6z15i00522ab4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.789162619193781,
+              "y" : -0.1538301537268884,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "tg7m7at2wikre6hz581f18kkc",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "39uc2322ih9gqy0kb7stad1ia",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.7893641976278734,
+              "y" : 0.2723764758175,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "7e2pyn9prh51taxbbkp4sey8c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 1.7899948429278996,
+              "y" : 1.597569651907743,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5700000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "0ra06kr93qrfn8qd508xksr5d",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "yfykd11daerimkw956s7y6r4d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.2839988917468455,
+              "y" : -3.1090249244826955,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "205c5r97y1192486weapzrmtd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.28465364377599134,
+              "y" : -1.71478846364136,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.38,
+          "thickness" : 0.18,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "1g1gu56u2hkhnmpwabydukq4a",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6synxarpn3gxgbkm8zupizhcd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 4.311327040351836,
+              "y" : -2.4205262520763804,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "f7zberexpff187bipdk4nyzbb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 3.2063551819971132,
+              "y" : -2.419973441696616,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "2gbmfft0w013myadf8gez60zd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6t25paqxe06k0wurfhb9t9rad",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -4.422284258664472,
+              "y" : -4.5044378298888335,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "tkk0dzmrw9kpxrpptdaqrpsxb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.2833223565859994,
+              "y" : -4.506740117146705,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.42,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "30t9z84d16zfkm9tsc8qry2wd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "ptq8emk3wn0udwcgctb0qhiba",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 4.310929310554474,
+              "y" : -3.23925624562386,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "6synxarpn3gxgbkm8zupizhcd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 4.311327040351836,
+              "y" : -2.4205262520763804,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.12,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "cs5acr4pmupz52pmcfe4stuwd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "yfykd11daerimkw956s7y6r4d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.2839988917468455,
+              "y" : -3.1090249244826955,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "tkk0dzmrw9kpxrpptdaqrpsxb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.2833223565859994,
+              "y" : -4.506740117146705,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.56,
+          "thickness" : 0.16,
+          "openings" : [ ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "q1cthbmmrs7pn0h7md5539hwb",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "inwg8mwf3cib5kemkuh2wh6wb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7926669112108452,
+              "y" : -1.7142835816384316,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "g7yeh744dn1zfm5xihcina89a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : -0.7920311029784078,
+              "y" : -0.38881453748045647,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.14,
+          "openings" : [ {
+            "id" : "aitcts50shq5u4nwkyepk81ra",
+            "width" : 0.642175510937003,
+            "relativeCenter" : 0.40049613252503935,
+            "type" : "doorway",
+            "height" : 2.0377809405326843,
+            "lowerElevation" : -0.010007262229919434,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        }, {
+          "id" : "5hxytbdw04x12wz67570nnxmd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+            "__typename" : "ModelLayer"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "5xqpccmcafdudpx1bs7px2bzd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 2.164169215141159,
+              "y" : -1.7156801271858408,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          }, {
+            "id" : "205c5r97y1192486weapzrmtd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "position" : {
+              "x" : 0.28465364377599134,
+              "y" : -1.71478846364136,
+              "__typename" : "Point2D"
+            },
+            "__typename" : "Vertex"
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.12,
+          "openings" : [ {
+            "id" : "5c66kbuy3y8b674ig49mbaera",
+            "width" : 0.6701835545799955,
+            "relativeCenter" : 0.2603407163320264,
+            "type" : "doorway",
+            "height" : 2.062000036239624,
+            "lowerElevation" : -0.001000046730041504,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+              "__typename" : "ModelLayer"
+            },
+            "__typename" : "Opening"
+          } ],
+          "__typename" : "Edge"
+        } ],
+        "__typename" : "ModelFloor"
+      } ],
+      "rooms" : [ {
+        "id" : "613htqkzf66zz7hf7n8kzszed",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "w4tdggk5i5u2zpiryugktghgb",
+          "confidence" : 0.7767707705497742,
+          "label" : "Living Room",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "42ws23fxpu78b4ef5p7nfmeka",
+            "__typename" : "Edge"
+          }, {
+            "id" : "i3bx0hkf0aigan856r9k7d09a",
+            "__typename" : "Edge"
+          }, {
+            "id" : "83q9txfb75u09ibn1ze6bumda",
+            "__typename" : "Edge"
+          }, {
+            "id" : "qw0311rpxgw0ew15i9azssqea",
+            "__typename" : "Edge"
+          }, {
+            "id" : "bnhq5k32b8exz06y8p6701nbb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "wxui1sda9xraca4t595dz7wrc",
+            "__typename" : "Edge"
+          }, {
+            "id" : "2egp0518cuczt88q42iuay7ec",
+            "__typename" : "Edge"
+          }, {
+            "id" : "g0n49tmhx56140g4p3xwbmq6d",
+            "__typename" : "Edge"
+          }, {
+            "id" : "tg7m7at2wikre6hz581f18kkc",
+            "__typename" : "Edge"
+          }, {
+            "id" : "1g1gu56u2hkhnmpwabydukq4a",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 191.6514651893047,
+          "areaIndoor" : 191.6514651893047,
+          "width" : 14.542531405923356,
+          "depth" : 12.728630479657298,
+          "height" : 7.972440636806488,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      }, {
+        "id" : "cdz3fkt38kae7tapstpt0eaeb",
+        "layer" : {
+          "id" : "sfu4sx4m51adaue1hdiq4mcib",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "pnf0xzq61xcegack4iai7xppd",
+          "confidence" : 1.0,
+          "label" : "Bedroom",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "9cstekh9i976su0mgy7s9n35b",
+            "__typename" : "Edge"
+          }, {
+            "id" : "kncwtz2bc60uy2x094s1n8bib",
+            "__typename" : "Edge"
+          }, {
+            "id" : "7q1udad10dtn4s1r9ph1fmnaa",
+            "__typename" : "Edge"
+          }, {
+            "id" : "0ra06kr93qrfn8qd508xksr5d",
+            "__typename" : "Edge"
+          }, {
+            "id" : "2gbmfft0w013myadf8gez60zd",
+            "__typename" : "Edge"
+          }, {
+            "id" : "cs5acr4pmupz52pmcfe4stuwd",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 131.05234800147315,
+          "areaIndoor" : 131.05234800147315,
+          "width" : 14.993475396456878,
+          "depth" : 8.74249338791754,
+          "height" : 8.02491567895621,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : "Bedroom 1",
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      }, {
+        "id" : "xy2x8mpaaqknp7q2c3nnbw1ma",
+        "layer" : {
+          "id" : "sfu4sx4m51adaue1hdiq4mcib",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "pnf0xzq61xcegack4iai7xppd",
+          "confidence" : 1.0,
+          "label" : "Bedroom",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "auyuyzp43mx1fkxfd90n5ztgb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "9cstekh9i976su0mgy7s9n35b",
+            "__typename" : "Edge"
+          }, {
+            "id" : "adn14dbuyi1chyr10e3aes3pd",
+            "__typename" : "Edge"
+          }, {
+            "id" : "5dyhx5w8bdqxfs7bgit5prmzb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "dewd6a2d53wqa3gadcpeafupd",
+            "__typename" : "Edge"
+          }, {
+            "id" : "q1cthbmmrs7pn0h7md5539hwb",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 64.83122261144672,
+          "areaIndoor" : 64.83122261144672,
+          "width" : 11.45376321591238,
+          "depth" : 6.10393832292932,
+          "height" : 7.981605468449071,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : "Bedroom 2",
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      }, {
+        "id" : "tt6gm2a0463x9wmnx7rn6gugc",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "ua1m0u8pm3yngrhzwec1ue5zc",
+          "confidence" : 0.7675730586051941,
+          "label" : "Bathroom",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "ei0uadmcdfew96gd1gpuruqib",
+            "__typename" : "Edge"
+          }, {
+            "id" : "bnhq5k32b8exz06y8p6701nbb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "sxi899xcnzim46m3fk0yuiqud",
+            "__typename" : "Edge"
+          }, {
+            "id" : "wxui1sda9xraca4t595dz7wrc",
+            "__typename" : "Edge"
+          }, {
+            "id" : "7x88nkthp769z8c41etsb8txb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "0qmmwzcd08bbgik4w6y4zpfyb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "0ra06kr93qrfn8qd508xksr5d",
+            "__typename" : "Edge"
+          }, {
+            "id" : "5hxytbdw04x12wz67570nnxmd",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 58.981408810111596,
+          "areaIndoor" : 58.981408810111596,
+          "width" : null,
+          "depth" : null,
+          "height" : 8.00524978773117,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      }, {
+        "id" : "h26t7ky77ew74yb0pg8qqf5rd",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "zgh2304w5anu0t25ia06ytfxd",
+          "confidence" : 0.8529891967773438,
+          "label" : "Kitchen",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "ei0uadmcdfew96gd1gpuruqib",
+            "__typename" : "Edge"
+          }, {
+            "id" : "42ws23fxpu78b4ef5p7nfmeka",
+            "__typename" : "Edge"
+          }, {
+            "id" : "xwti8qy98qf5dgnztama2ew2b",
+            "__typename" : "Edge"
+          }, {
+            "id" : "bp5t7h83pa9n7acn7nknw56qb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "1g1gu56u2hkhnmpwabydukq4a",
+            "__typename" : "Edge"
+          }, {
+            "id" : "30t9z84d16zfkm9tsc8qry2wd",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 70.1278097651572,
+          "areaIndoor" : 70.1278097651572,
+          "width" : 11.10579525149931,
+          "depth" : 6.401459106774242,
+          "height" : 8.038058156442641,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      }, {
+        "id" : "3m54yff1z7crxaywd8if9rb0d",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd",
+          "__typename" : "ModelFloor"
+        },
+        "classifications" : [ {
+          "id" : "yeh1aa32fwgm72bh0g92ebruc",
+          "confidence" : 0.8453739285469055,
+          "label" : "Hallway",
+          "__typename" : "RoomClassification"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "02nh7yu8ngn0ec62wz01s1u1c",
+            "__typename" : "Edge"
+          }, {
+            "id" : "83q9txfb75u09ibn1ze6bumda",
+            "__typename" : "Edge"
+          }, {
+            "id" : "hm55awzxq6icur1rqt3cfkb9b",
+            "__typename" : "Edge"
+          }, {
+            "id" : "qw0311rpxgw0ew15i9azssqea",
+            "__typename" : "Edge"
+          }, {
+            "id" : "kncwtz2bc60uy2x094s1n8bib",
+            "__typename" : "Edge"
+          }, {
+            "id" : "g0n49tmhx56140g4p3xwbmq6d",
+            "__typename" : "Edge"
+          }, {
+            "id" : "q1cthbmmrs7pn0h7md5539hwb",
+            "__typename" : "Edge"
+          }, {
+            "id" : "5hxytbdw04x12wz67570nnxmd",
+            "__typename" : "Edge"
+          } ],
+          "__typename" : "BoundedRegion"
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 54.67892107401205,
+          "areaIndoor" : 54.67892107401205,
+          "width" : 9.240271577602575,
+          "depth" : 6.104529699410943,
+          "height" : 7.972440636806488,
+          "units" : "imperial",
+          "__typename" : "Dimensions"
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ],
+        "__typename" : "ModelRoom"
+      } ],
+      "__typename" : "Model"
+    }
+  }
+}

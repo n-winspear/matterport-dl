@@ -1,0 +1,82 @@
+{
+  "errors" : [ {
+    "message" : "Error fetching data (path: /model/notes, code: request.unauthorized): Unauthorized",
+    "locations" : [ {
+      "line" : 24,
+      "column" : 5
+    } ],
+    "path" : [ "model", "notes" ],
+    "extensions" : {
+      "code" : "request.unauthorized",
+      "retry" : "false",
+      "httpCode" : 401,
+      "classification" : "DataFetchingException"
+    }
+  } ],
+  "data" : {
+    "model" : {
+      "id" : "AxN4GbV5ko7",
+      "mattertags" : [ ],
+      "orderedLists" : [ ],
+      "labels" : [ ],
+      "measurementPaths" : [ ],
+      "activeHighlightReel" : null,
+      "notes" : null,
+      "image" : {
+        "id" : "NHmajZ11QnV",
+        "label" : "10.21.2025_14.50.43",
+        "classification" : null,
+        "category" : "snapshot",
+        "height" : 1707,
+        "width" : 3034,
+        "created" : "2025-10-21T13:50:45Z",
+        "modified" : "2025-10-21T13:50:45Z",
+        "status" : "available",
+        "filename" : "10212025_145043.jpg",
+        "format" : "image",
+        "url" : "http://127.0.0.1:8080/apifs/models/AxN4GbV5ko7/images/NHmajZ11QnV/10.21.2025_14.50.43.jpg?t=2-6feaf953ece1ed79b9b692dad5d200b7cbce2510-1763802636-1",
+        "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+        "type" : "photo2D",
+        "origin" : "user",
+        "validUntil":"2099-01-01T09:10:36Z",
+        "thumbnailUrl" : "http://127.0.0.1:8080/apifs/models/AxN4GbV5ko7/images/NHmajZ11QnV/10.21.2025_14.50.43.jpg?t=2-6feaf953ece1ed79b9b692dad5d200b7cbce2510-1763802636-1&width=200&height=140&fit=crop&disable=upscale",
+        "presentationUrl" : "http://127.0.0.1:8080/apifs/models/AxN4GbV5ko7/images/NHmajZ11QnV/10.21.2025_14.50.43.jpg?t=2-6feaf953ece1ed79b9b692dad5d200b7cbce2510-1763802636-1&width=1920&height=1080&fit=crop&disable=upscale",
+        "snapshotLocation" : {
+          "viewMode" : "panorama",
+          "position" : {
+            "x" : -0.011417937465012074,
+            "y" : -0.005905867088586092,
+            "z" : 1.3462210893630981,
+            "__typename" : "Point"
+          },
+          "rotation" : {
+            "x" : -0.21212439577501535,
+            "y" : 0.7153422161498952,
+            "z" : -0.6383255334150941,
+            "w" : 0.1892862062662204,
+            "__typename" : "Quaternion"
+          },
+          "zoom" : 1.0,
+          "floorVisibility" : [ {
+            "id" : "tsmq1wak12rhgn0mawksxcwcd",
+            "meshId" : 0,
+            "sequence" : 0,
+            "__typename" : "ModelFloor"
+          } ],
+          "anchor" : {
+            "id" : "tdryqst9ww9zxw1p9fce7rpwd",
+            "pano" : {
+              "id" : "tdryqst9ww9zxw1p9fce7rpwd",
+              "placement" : "auto",
+              "__typename" : "PanoramicImageLocation"
+            },
+            "__typename" : "AnchorLocation"
+          },
+          "__typename" : "SnapshotLocation"
+        },
+        "__typename" : "Photo"
+      },
+      "__typename" : "Model"
+    }
+  }
+}

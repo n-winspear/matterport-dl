@@ -1,0 +1,48 @@
+{
+  "data" : {
+    "view" : {
+      "id" : "AxN4GbV5ko7",
+      "layers" : [ {
+        "layer" : {
+          "id" : "hk5spn89ap9nnbibzifr2hyxc",
+          "created" : "2025-10-21T13:46:25Z",
+          "modified" : "2025-10-23T01:55:54Z",
+          "type" : "matterport.user.data",
+          "name" : "matterport.user.data",
+          "label" : "",
+          "__typename" : "ModelLayer"
+        },
+        "position" : 0,
+        "visible" : true,
+        "__typename" : "ModelViewLayer"
+      }, {
+        "layer" : {
+          "id" : "sfu4sx4m51adaue1hdiq4mcib",
+          "created" : "2025-10-21T14:02:42Z",
+          "modified" : "2025-10-21T14:03:01Z",
+          "type" : "matterport.proxy.common",
+          "name" : "matterport.proxy.common",
+          "label" : "proxy-aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "__typename" : "ModelLayer"
+        },
+        "position" : 1,
+        "visible" : true,
+        "__typename" : "ModelViewLayer"
+      }, {
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "created" : "2025-10-21T13:01:08Z",
+          "modified" : "2025-10-23T01:55:54Z",
+          "type" : "matterport.base",
+          "name" : null,
+          "label" : "",
+          "__typename" : "ModelLayer"
+        },
+        "position" : 2,
+        "visible" : true,
+        "__typename" : "ModelViewLayer"
+      } ],
+      "__typename" : "ModelView"
+    }
+  }
+}
